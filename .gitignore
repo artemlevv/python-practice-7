@@ -1,0 +1,29 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+venv/
+env/
+.idea/
+.idea/*
+.DS_Store
+
+# Virtual Environment
+.venv/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Coverage reports
+.coverage
+*.coveragerc
+
+# Misc
+*.swp
+

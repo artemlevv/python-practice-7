@@ -6,7 +6,6 @@ venv/
 env/
 .idea/
 .idea/*
-/.idea/
 .DS_Store
 
 # Virtual Environment
@@ -28,3 +27,4 @@ env/
 # Misc
 *.swp
 
+/.idea/

@@ -4,8 +4,8 @@ from app.io.output import output_text, write_file_builtin
 
 def main():
     console_input = input_text()
-    file_input_builtin = read_file_builtin()
-    file_input_pandas = read_file_pandas()
+    file_input_builtin = read_file_builtin('data/input.txt')
+    file_input_pandas = read_file_pandas('data/input.csv')
 
     output_text(console_input)
     output_text(file_input_builtin)

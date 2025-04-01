@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 def input_text():
     """
@@ -6,22 +7,21 @@ def input_text():
     """
     return input("Enter some text: ")
 
-def read_file_builtin():
+def read_file_builtin(file_path):
     """
     Function to read a file using Python's built-in functions.
     """
-    try:
-        with open('data/input.txt', 'r') as file:
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
             return file.read()
-    except FileNotFoundError:
-        return "File not found"
+    return "File not found"
 
-def read_file_pandas():
+
+def read_file_pandas(file_path):
     """
     Function to read a file using the pandas library.
     """
-    try:
-        df = pd.read_csv('data/input.csv')
-        return df.to_string()
-    except FileNotFoundError:
-        return "File not found"
+    if os.path.exists(file_path):
+        df = pd.read_csv(file_path)
+        return df.to_string(index=False).strip()
+    return "File not found"
